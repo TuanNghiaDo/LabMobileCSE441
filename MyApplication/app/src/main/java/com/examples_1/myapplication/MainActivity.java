@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
                 String textB = edt_B.getText().toString().trim();
                 if(textA.isEmpty() || textB.isEmpty()){
                     // Parameters in the Toast.makeText() method: which activity display?, message,display time
-                    Toast.makeText(MainActivity.this, "Vui lòng nhập đủ cả hai số a và b", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, R.string.errorEmpty, Toast.LENGTH_SHORT).show();
                     edtResult.setText("");
                     return;
                 }
@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
                     int c = a + b;
                     edtResult.setText(String.valueOf(c));
                 } catch (NumberFormatException e) {
-                    Toast.makeText(MainActivity.this, "Vui lòng nhập số nguyên!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, R.string.erorrFormat, Toast.LENGTH_SHORT).show();
                     edtResult.setText("");
                     Log.e("MainActivity", "Lỗi định dạng số: " + e.getMessage());
                 }

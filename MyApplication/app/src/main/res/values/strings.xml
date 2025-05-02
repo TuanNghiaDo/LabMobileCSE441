@@ -4,4 +4,6 @@
     <string name="edt_B_hint">Nhập B</string>
     <string name="result_hint">Kết quả</string>
     <string name="btn_total">Tổng</string>
+    <string name="errorEmpty">Vui lòng nhập đủ cả hai số a và b!</string>
+    <string name="erorrFormat">Vui lòng nhập số nguyên!</string>
 </resources>
