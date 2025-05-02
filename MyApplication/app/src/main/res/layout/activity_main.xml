@@ -8,6 +8,7 @@
     tools:context=".MainActivity">
 
     <EditText
+        android:minHeight="48dp"
         android:id="@+id/edt_A"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -22,6 +23,7 @@
         android:layout_marginTop="60dp"/>
 
     <EditText
+        android:minHeight="48dp"
         android:id="@+id/edt_B"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -36,6 +38,7 @@
         android:layout_marginTop="120dp"/>
 
     <EditText
+        android:minHeight="48dp"
         android:id="@+id/result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -53,12 +56,14 @@
         android:id="@+id/sum"
         android:layout_width="120dp"
         android:layout_height="wrap_content"
-        android:text="Total"
+        android:text="Tổng"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/result"
         android:textSize="20sp"
-        android:layout_marginTop="120dp" />
+        android:layout_marginTop="120dp"
+        android:background="@drawable/custom_button"
+        app:backgroundTint="@null" /> <!--Remove the default color-->
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
