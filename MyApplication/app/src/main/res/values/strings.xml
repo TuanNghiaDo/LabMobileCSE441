@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">MyApplication</string>
+    <string name="edt_A_hint">Nhập A</string>
+    <string name="edt_B_hint">Nhập B</string>
+    <string name="result_hint">Kết quả</string>
+    <string name="btn_total">Tổng</string>
 </resources>
