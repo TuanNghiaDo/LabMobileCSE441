@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Project_cal</string>
+    <string name="add">Tổng</string>
+    <string name="sub">Hiệu</string>
+    <string name="mul">Tích</string>
+    <string name="div">Thương</string>
 </resources>
