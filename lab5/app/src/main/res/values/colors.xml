@@ -2,4 +2,9 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="titleColor">#0A7A44</color>
+    <color name="edtLunarYearColor">#E3E40C</color>
+    <color name="btnColor">#C3C4C5</color>
+    <color name="shadowColor">#8C8D8E</color>
+    <color name="textCommonColor">#69696B</color>
 </resources>
