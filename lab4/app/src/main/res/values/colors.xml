@@ -2,4 +2,8 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="edtFocus">#0A84B6</color>
+    <color name="editNotFocus">#CDCDCD</color>
+    <color name="btnBackground">#C0C2C2</color>
+    <color name="btnBorderColor">#9C999E</color>
 </resources>
