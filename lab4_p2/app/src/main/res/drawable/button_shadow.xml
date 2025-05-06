@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Layer 1: Màu viền (nằm dưới cùng) -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/shadowColor" /> <!-- Màu của viền -->
+            <!-- Nếu bạn muốn bo góc, hãy thêm vào đây -->
+            <!-- <corners android:radius="Xdp"/> -->
+        </shape>
+    </item>
+
+    <!-- Layer 2: Màu nền chính (nằm trên, với lề để lộ viền) -->
+    <item
+        android:top="0dp"
+        android:bottom="2dp"
+        android:left="1dp"
+        android:right="1dp">
+
+        <shape android:shape="rectangle">
+            <solid android:color="@color/btnColor" /> <!-- Màu nền chính -->
+            <!-- Nếu bạn muốn bo góc, hãy thêm vào đây VÀ phải giống lớp viền -->
+            <!-- <corners android:radius="Xdp"/> -->
+        </shape>
+    </item>
+</layer-list>
