@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace = "com.examples_3.tempertureconvertationapp"
+    namespace = "com.examples_3.convertgeogorianyear"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.examples_3.tempertureconvertationapp"
+        applicationId = "com.examples_3.convertgeogorianyear"
         minSdk = 24
         targetSdk = 35
         versionCode = 1
@@ -40,5 +40,4 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
-
 }
