@@ -61,6 +61,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent1 = new Intent(MainActivity.this, Subactivity.class);
+                //send data to Subactivity
+                intent1.putExtra("anhyeuem", "CR424");
                 startActivity(intent1);
             }
         });

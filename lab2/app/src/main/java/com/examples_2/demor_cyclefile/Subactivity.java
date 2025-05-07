@@ -1,8 +1,10 @@
 package com.examples_2.demor_cyclefile;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -23,5 +25,10 @@ public class Subactivity extends AppCompatActivity {
                 finish();
             }
         });
+
+        //get data from MainActivity
+        Intent intent = getIntent();
+        String myReceive = intent.getStringExtra("anhyeuem");
+        Toast.makeText(Subactivity.this, myReceive, Toast.LENGTH_SHORT).show();
     }
 }
