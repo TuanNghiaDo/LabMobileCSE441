@@ -27,7 +27,7 @@
             android:gravity="center_horizontal"
             android:textColor="@color/textCommonColor" />
         <EditText
-            android:id="@+id/edtGeogorianYear"
+            android:id="@+id/edt_geogorian_year"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"/>
@@ -38,6 +38,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"/>
         <Button
+            android:id="@+id/btn_convert"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"
@@ -55,11 +56,12 @@
             android:text="Năm âm lịch:"
             android:layout_weight="1"/>
         <TextView
+            android:id="@+id/edt_lunar_year"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"
             android:textSize="22sp"
-            android:text="Qúy Tỵ"
+            android:text=""
             android:background="@color/edtLunarYearColor"
             />
     </TableRow>
