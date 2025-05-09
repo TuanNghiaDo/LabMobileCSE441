@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Quadratic_equation_app</string>
+    <string name="title">Giải phương trình bậc 2</string>
+    <string name="input_a">Nhập a</string>
+    <string name="input_b">Nhập b</string>
+    <string name="input_c">Nhập c</string>
+    <string name="btn_continue">Tiếp tục</string>
+    <string name="btn_solve">Giải PT</string>
+    <string name="btn_back">Thoát</string>
 </resources>
