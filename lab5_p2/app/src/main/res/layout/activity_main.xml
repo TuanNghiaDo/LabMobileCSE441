@@ -20,27 +20,111 @@
             <TextView
                 android:text="@string/title"
                 android:textColor="@color/white"
-                android:textSize="30sp"
+                android:textSize="30sp"/>
         </TableRow>
         <TableRow
             android:weightSum="3"
-            android:background="@color/tv_title"
-            android:gravity="center_horizontal">
+            android:gravity="center_horizontal"
+            android:layout_marginTop="16dp">
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="@string/input_a"
-                android:textColor="@color/white"
-                android:textSize="22sp"/>
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:background="@color/tv_input"/>
             <EditText
                 android:id="@+id/edt_a"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
                 android:background="@color/white"
-                android:hint="@string/input_a"
                 android:textColor="@color/tv_input"
+                android:textSize="22sp"/>
+        </TableRow>
+        <TableRow
+            android:weightSum="3"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="16dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/input_b"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:background="@color/tv_input"/>
+            <EditText
+                android:id="@+id/edt_b"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:background="@color/white"
+                android:textColor="@color/tv_input"
+                android:textSize="22sp"/>
+        </TableRow>
+        <TableRow
+            android:weightSum="3"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="16dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/input_c"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:background="@color/tv_input"/>
+            <EditText
+                android:id="@+id/edt_c"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:background="@color/white"
+                android:textColor="@color/tv_input"
+                android:textSize="22sp"/>
+        </TableRow>
+        <TableRow
+            android:weightSum="3"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:autoSizeMaxTextSize="22sp"
+                android:text="@string/btn_continue"
+                android:background="@drawable/design_button"
+                app:backgroundTint="@null"
+                android:textColor="@color/black"
+                android:layout_marginHorizontal="4dp"/>
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:autoSizeMaxTextSize="22sp"
+                android:text="@string/btn_solve"
+                android:background="@drawable/design_button"
+                app:backgroundTint="@null"
+                android:textColor="@color/black"
+                android:layout_marginHorizontal="4dp"/>
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:autoSizeMaxTextSize="22sp"
+                android:text="@string/btn_back"
+                android:background="@drawable/design_button"
+                app:backgroundTint="@null"
+                android:textColor="@color/black"
+                android:layout_marginHorizontal="4dp"/>
+        </TableRow>
+        <TableRow
+            android:background="@color/tv_title"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="10dp">
+            <TextView
+                android:text="@string/title"
+                android:textColor="@color/white"
                 android:textSize="22sp"/>
         </TableRow>
 

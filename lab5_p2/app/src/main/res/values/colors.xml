@@ -6,4 +6,5 @@
     <color name="tv_title">#0A7A0C</color>
     <color name="button">#C0C2C2</color>
     <color name="edt_focus">#0A8BBA</color>
+    <color name="shadowColor">#8C8D8E</color>
 </resources>
