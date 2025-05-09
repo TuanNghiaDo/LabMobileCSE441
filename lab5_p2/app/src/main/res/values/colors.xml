@@ -2,4 +2,8 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="tv_input">#C7E4C9</color>
+    <color name="tv_title">#0A7A0C</color>
+    <color name="button">#C0C2C2</color>
+    <color name="edt_focus">#0A8BBA</color>
 </resources>
