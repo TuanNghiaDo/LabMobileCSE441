@@ -7,4 +7,7 @@
     <color name="button">#C0C2C2</color>
     <color name="edt_focus">#0A8BBA</color>
     <color name="shadowColor">#8C8D8E</color>
+    <color name="default_app">#E0DCE3</color>
+    <color name="underline_notfocus">#B0AFB2</color>
+
 </resources>

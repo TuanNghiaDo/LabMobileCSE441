@@ -4,6 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/default_app"
     tools:context=".MainActivity">
 
     <TableLayout
@@ -39,7 +40,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
-                android:background="@color/white"
+
                 android:textColor="@color/tv_input"
                 android:textSize="22sp"/>
         </TableRow>
@@ -60,7 +61,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
-                android:background="@color/white"
+
                 android:textColor="@color/tv_input"
                 android:textSize="22sp"/>
         </TableRow>
@@ -81,7 +82,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
-                android:background="@color/white"
+
                 android:textColor="@color/tv_input"
                 android:textSize="22sp"/>
         </TableRow>
