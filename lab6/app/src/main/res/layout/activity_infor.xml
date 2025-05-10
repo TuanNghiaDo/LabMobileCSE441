@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:padding="16dp"
     tools:context=".InforActivity">
@@ -14,6 +14,7 @@ android:layout_width="match_parent"
 android:layout_height="wrap_content"
 android:text="Thông tin cá nhân"
 android:textSize="20sp"
+    android:textColor="@color/edt_focus"
 /> <!-- Thay your_blue_color bằng màu xanh bạn muốn -->
 
     <!-- Đường kẻ ngang mỏng -->
@@ -96,5 +97,6 @@ android:id="@+id/button_close"
     android:text="Đóng"
     android:textColor="@android:color/black"
     android:background="@color/my_blue"
+    app:backgroundTint="@null"
     android:layout_gravity="bottom|center_horizontal" />
     </LinearLayout>
