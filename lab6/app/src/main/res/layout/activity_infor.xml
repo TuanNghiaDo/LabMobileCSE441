@@ -95,6 +95,6 @@ android:id="@+id/button_close"
     android:layout_height="wrap_content"
     android:text="Đóng"
     android:textColor="@android:color/black"
-    android:background="@color/your_light_blue_color"
+    android:background="@color/my_blue"
     android:layout_gravity="bottom|center_horizontal" />
     </LinearLayout>

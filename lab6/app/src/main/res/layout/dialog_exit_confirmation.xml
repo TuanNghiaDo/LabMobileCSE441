@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"> <!-- Thêm padding để nội dung không dính sát viền -->
+
+    <!-- Phần chứa Icon và Tiêu đề -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"> <!-- Căn giữa theo chiều dọc các item con -->
+
+        <!-- Icon -->
+        <ImageView
+            android:id="@+id/icon_dialog"
+            android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/areyousure"
+        android:layout_marginEnd="16dp" /> <!-- Khoảng cách giữa icon và text -->
+
+        <!-- Tiêu đề Dialog -->
+        <TextView
+            android:id="@+id/text_dialog_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Question"
+            android:textSize="20sp"
+            android:textStyle="bold" /> <!-- Làm đậm tiêu đề -->
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/text_dialog_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Are you sure you want to exit?"
+        android:textSize="16sp" />
+</LinearLayout>
