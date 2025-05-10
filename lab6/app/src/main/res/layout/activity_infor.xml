@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".InforActivity">
+
+    <!-- Tiêu đề "Thông tin cá nhân" -->
+<TextView
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:text="Thông tin cá nhân"
+android:textSize="20sp"
+/> <!-- Thay your_blue_color bằng màu xanh bạn muốn -->
+
+    <!-- Đường kẻ ngang mỏng -->
+<View
+android:layout_width="match_parent"
+android:layout_height="1dp"
+android:background="@color/my_blue" /> <!-- Màu của đường kẻ, có thể khác màu tiêu đề -->
+
+    <!-- Các dòng thông tin cá nhân -->
+<TextView
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_marginTop="8dp"
+    android:text="Doan Ai Nuong"
+    android:textSize="16sp" />
+
+<TextView
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:text="250592829"
+android:textSize="16sp" />
+
+<TextView
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:text="Đại học"
+android:textSize="16sp" />
+
+<TextView
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:text="Đọc báo- Đọc coding"
+android:textSize="16sp" />
+
+    <!-- Đường kẻ gạch ngang (có thể dùng TextView với dấu gạch nối) -->
+<TextView
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_marginTop="8dp"
+android:layout_marginBottom="8dp"
+android:text="----------------------------------------"
+android:gravity="center_horizontal" /> <!-- Căn giữa dấu gạch -->
+
+
+    <!-- Tiêu đề "Thông tin bổ sung" -->
+<TextView
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:text="Thông tin bổ sung:"
+android:textSize="16sp"
+android:textStyle="bold" /> <!-- Nếu muốn in đậm -->
+
+    <!-- Các dòng thông tin bổ sung -->
+<TextView
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:text="Senior Programmer"
+android:textSize="16sp" />
+
+<TextView
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:text="Senior Saler"
+android:textSize="16sp" />
+
+    <!-- Đường kẻ gạch ngang thứ hai -->
+<TextView
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_marginTop="8dp"
+android:layout_marginBottom="16dp"
+    android:text="----------------------------------------"
+    android:gravity="center_horizontal" />
+
+    <!-- Nút "Đóng" -->
+<Button
+android:id="@+id/button_close"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Đóng"
+    android:textColor="@android:color/black"
+    android:background="@color/your_light_blue_color"
+    android:layout_gravity="bottom|center_horizontal" />
+    </LinearLayout>
