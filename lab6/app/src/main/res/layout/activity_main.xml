@@ -31,6 +31,7 @@
                 android:layout_weight="1"
                 android:text="Ho va ten" />
             <EditText
+                android:id="@+id/name"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="4"
@@ -46,6 +47,7 @@
                 android:layout_weight="1"
                 android:text="CMND:" />
             <EditText
+                android:id="@+id/cmnd"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:hint="CMND"
@@ -57,7 +59,8 @@
             android:textColor="@color/text_title_infor"
             android:textSize="20sp"
             android:text="Bang cap"/>
-        <RadioGroup android:orientation="horizontal">
+        <RadioGroup android:orientation="horizontal"
+            android:id="@+id/group_radiobtn">
             <RadioButton
                 android:text="Trung cap"
                 android:layout_width="0dp"
@@ -82,16 +85,19 @@
             android:text="So thich"/>
         <LinearLayout android:orientation="horizontal">
             <CheckBox
+                android:id="@+id/read_article"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="match_parent"
                 android:text="Doc bao" />
             <CheckBox
+                android:id="@+id/read_book"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="match_parent"
                 android:text="Doc sach" />
             <CheckBox
+                android:id="@+id/read_coding"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="match_parent"
@@ -104,9 +110,11 @@
             android:gravity="center_horizontal"
             android:text="Thong tin bo sung"/>
         <EditText
+            android:id="@+id/infor_supplement"
             android:paddingTop="30dp"
-            android:text="abcxyz"/>
+            android:text=""/>
         <Button
+            android:id="@+id/btn_send"
             android:layout_marginTop="10dp"
             android:textSize="18sp"
             android:layout_height="wrap_content"
