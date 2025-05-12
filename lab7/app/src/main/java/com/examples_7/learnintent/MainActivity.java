@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 Button btnResult;
-EditText edtA, edtB;
+EditText edtA, edtB, edtResult;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,6 +18,7 @@ EditText edtA, edtB;
         btnResult = findViewById(R.id.button_result);
         edtA = findViewById(R.id.edt_A);
         edtB = findViewById(R.id.edt_B);
+        edtResult = findViewById(R.id.edt_result);
         btnResult.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -31,8 +32,22 @@ EditText edtA, edtB;
                 intent1.putExtras(bundle);
                 //Or use intent1.putExtra("myBundle", bundle);
                 //Display the child activity
-                startActivity(intent1);
+                startActivityForResult(intent1, 99); //99 is uesed to identify the request code
             }
         });
+    }
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == 99 && resultCode == 33) {
+            Bundle bundle = data.getExtras();
+            int result = bundle.getInt("result");
+            edtResult.setText("Tổng hai số là: "+String.valueOf(result));
+        }
+        if(requestCode == 99 && resultCode == 34) {
+            Bundle bundle = data.getExtras();
+            int result = bundle.getInt("result");
+            edtResult.setText("Hiệu hai số là: "+String.valueOf(result));
+        }
     }
 }
