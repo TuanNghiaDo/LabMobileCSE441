@@ -10,8 +10,8 @@
     <TextView
         android:id="@+id/tv_main"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:text="@string/main_text"
+        android:layout_height="wrap_content"
+        android:text="@string/title1"
         android:gravity="center"
         android:textColor="@color/background_child_activity"
         android:background="@color/background_main_activity"
@@ -20,15 +20,55 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-    <Button
-        android:id="@+id/button_main"
+    <TextView
+        android:id="@+id/tv_A"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/button_main"
+        android:text="@string/edt_A"
+        android:backgroundTint="@color/background_child_activity"
+        android:textColor="@color/background_main_activity"
+        android:layout_marginTop="20dp"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_main"/>
+    <EditText
+        android:id="@+id/edt_A"
+        android:layout_width="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="50dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/tv_A"
+        app:layout_constraintTop_toBottomOf="@+id/tv_main"
+        android:layout_marginTop="20dp"/>
+    <TextView
+        android:id="@+id/tv_B"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/edt_B"
+        android:backgroundTint="@color/background_child_activity"
+        android:textColor="@color/background_main_activity"
+        android:layout_marginTop="20dp"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_A"/>
+    <EditText
+        android:id="@+id/edt_B"
+        android:layout_width="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="50dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/tv_B"
+        app:layout_constraintTop_toBottomOf="@+id/edt_A"
+        android:layout_marginTop="20dp"/>
+    <Button
+        android:id="@+id/button_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_result"
         android:backgroundTint="@color/background_child_activity"
         android:textColor="@color/background_main_activity"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_main"/>
+        app:layout_constraintTop_toBottomOf="@+id/edt_B"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,4 +4,8 @@
     <string name="child_text">This is child Activity</string>
     <string name="button_main">Open Child Activity</string>
     <string name="button_child">Back to Main Activity</string>
+    <string name="title1">Giải phươpng trình bậc 1</string>
+    <string name="edt_A">Nhập a:</string>
+    <string name="edt_B">Nhập b:</string>
+    <string name="btn_result">Kết quả</string>
 </resources>
