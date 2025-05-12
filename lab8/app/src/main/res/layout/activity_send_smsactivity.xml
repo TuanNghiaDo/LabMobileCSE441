@@ -29,7 +29,7 @@
 
         <!-- ImageButton -->
         <EditText
-            android:id="@+id/edt_call"
+            android:id="@+id/edt_phone_number"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -42,7 +42,7 @@
             android:layout_height="56dp"
             android:src="@android:drawable/ic_menu_send"
             android:background="@color/sms"
-            android:id="@+id/btn_sms" />
+            android:id="@+id/btn_send_sms" />
 
     </LinearLayout> <!-- End of nested LinearLayout -->
 
