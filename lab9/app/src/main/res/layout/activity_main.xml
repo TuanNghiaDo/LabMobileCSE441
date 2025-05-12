@@ -15,7 +15,7 @@
         android:src="@drawable/nhac" />
 
     <ImageButton
-        android:id="@+id/imagstart"
+        android:id="@+id/imag_start"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:src="@drawable/start"
@@ -23,7 +23,7 @@
         android:layout_gravity="center_horizontal"/>
 
     <ImageButton
-        android:id="@+id/imgstop"
+        android:id="@+id/imag_stop"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:src="@drawable/stop"
