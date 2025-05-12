@@ -11,7 +11,7 @@
         android:id="@+id/tv_title_result"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/result_title"
+        android:text="@string/process_result"
         android:gravity="center"
         android:background="@color/background_child_activity"
         android:textColor="@color/background_main_activity"
@@ -21,21 +21,66 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
     <TextView
-        android:id="@+id/tv_result"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="@color/background_result"
-        android:gravity="center"
-        app:layout_constraintTop_toBottomOf="@+id/tv_title_result"/>
-    <Button
-        android:id="@+id/button_cancel"
+        android:id="@+id/tv_receive_A"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/back"
+        android:text="Nhận A:"
+        android:backgroundTint="@color/background_child_activity"
+        android:textColor="@color/background_main_activity"
+        android:layout_marginTop="20dp"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title_result"/>
+    <EditText
+        android:id="@+id/edt_receive_A"
+        android:layout_width="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="50dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/tv_receive_A"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title_result"
+        android:layout_marginTop="20dp"/>
+    <TextView
+        android:id="@+id/tv_receive_B"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nhận B:"
+        android:backgroundTint="@color/background_child_activity"
+        android:textColor="@color/background_main_activity"
+        android:layout_marginTop="20dp"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_receive_A"/>
+    <EditText
+        android:id="@+id/edt_receive_B"
+        android:layout_width="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="50dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/tv_receive_A"
+        app:layout_constraintTop_toBottomOf="@+id/edt_receive_A"
+        android:layout_marginTop="20dp"/>
+    <Button
+        android:id="@+id/button_add"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="TRẢ VỀ TỔNG"
         android:backgroundTint="@color/background_main_activity"
         android:textColor="@color/background_child_activity"
-        app:layout_constraintTop_toBottomOf="@+id/tv_result"
+        app:layout_constraintTop_toBottomOf="@+id/edt_receive_B"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button_sub"
+        android:layout_marginEnd="6dp"/>
+    <Button
+        android:id="@+id/button_sub"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="TRẢ VỀ HIỆU"
+        android:backgroundTint="@color/background_main_activity"
+        android:textColor="@color/background_child_activity"
+        app:layout_constraintTop_toBottomOf="@+id/edt_receive_B"
+        app:layout_constraintStart_toEndOf="@+id/button_add"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
+        android:layout_marginStart="6dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

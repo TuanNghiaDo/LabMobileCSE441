@@ -7,7 +7,9 @@
     <string name="title1">Giải phươpng trình bậc 1</string>
     <string name="edt_A">Nhập a:</string>
     <string name="edt_B">Nhập b:</string>
-    <string name="btn_result">Kết quả</string>
+    <string name="btn_result">Yêu cầu kết quả</string>
     <string name="result_title">Kết quả giải phương trình bậc 1</string>
     <string name="back">Thoát </string>
+    <string name="result">Kết quả:</string>
+    <string name="process_result">Xử lí Kết quả</string>
 </resources>

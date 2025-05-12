@@ -11,7 +11,7 @@
         android:id="@+id/tv_main"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/title1"
+        android:text="@string/btn_result"
         android:gravity="center"
         android:textColor="@color/background_child_activity"
         android:background="@color/background_main_activity"
@@ -60,6 +60,26 @@
         app:layout_constraintStart_toEndOf="@+id/tv_B"
         app:layout_constraintTop_toBottomOf="@+id/edt_A"
         android:layout_marginTop="20dp"/>
+    <TextView
+        android:id="@+id/tv_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/result"
+        android:backgroundTint="@color/background_child_activity"
+        android:textColor="@color/edt_red"
+        android:layout_marginTop="20dp"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_B"/>
+    <EditText
+        android:id="@+id/edt_result"
+        android:layout_width="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="50dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/tv_B"
+        app:layout_constraintTop_toBottomOf="@+id/edt_B"
+        android:layout_marginTop="20dp"/>
     <Button
         android:id="@+id/button_result"
         android:layout_width="wrap_content"
@@ -69,6 +89,6 @@
         android:textColor="@color/background_main_activity"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edt_B"/>
+        app:layout_constraintTop_toBottomOf="@+id/edt_result"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,4 +5,5 @@
     <color name="background_main_activity">#49A275</color>
     <color name="background_child_activity">#E3E40C</color>
     <color name="background_result">#B9E4C9</color>
+    <color name="edt_red">#FF0033</color>
 </resources>
