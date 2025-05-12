@@ -2,4 +2,6 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="call">#507A0C</color>
+    <color name="sms">#51A851</color>
 </resources>

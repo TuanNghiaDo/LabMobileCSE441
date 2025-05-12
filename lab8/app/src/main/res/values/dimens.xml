@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+        <!-- Các kích thước padding mặc định -->
+        <dimen name="activity_horizontal_margin">16dp</dimen>
+        <dimen name="activity_vertical_margin">32dp</dimen>
+
+        <!-- Các kích thước padding/margin tùy chỉnh khác -->
+        <dimen name="padding_small">8dp</dimen>
+        <dimen name="padding_medium">16dp</dimen>
+        <dimen name="padding_large">32dp</dimen>
+
+        <!-- Kích thước text -->
+        <dimen name="text_size_large">20sp</dimen>
+</resources>
