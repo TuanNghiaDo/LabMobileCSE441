@@ -4,4 +4,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="background_main_activity">#49A275</color>
     <color name="background_child_activity">#E3E40C</color>
+    <color name="background_result">#B9E4C9</color>
 </resources>
