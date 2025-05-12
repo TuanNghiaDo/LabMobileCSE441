@@ -3,4 +3,5 @@
     <string name="main_text">This is main Activity</string>
     <string name="child_text">This is child Activity</string>
     <string name="button_main">Open Child Activity</string>
+    <string name="button_child">Back to Main Activity</string>
 </resources>

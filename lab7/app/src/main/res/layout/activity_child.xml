@@ -21,10 +21,10 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
     <Button
-        android:id="@+id/button"
+        android:id="@+id/button_child"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/button_main"
+        android:text="@string/button_child"
         android:backgroundTint="@color/background_main_activity"
         android:textColor="@color/background_child_activity"
         app:layout_constraintEnd_toEndOf="parent"
