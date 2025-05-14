@@ -8,12 +8,34 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/tv_input"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="@string/title_input"
+        android:textSize="20sp"
+        android:textColor="@color/tv_input"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+    <EditText
+        android:id="@+id/edt_link"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tv_input"
+        app:layout_constraintStart_toStartOf="parent"
+        android:backgroundTint="@color/edittext_underline_color"
+        android:textCursorDrawable="@null"
+        android:textColorHighlight="@color/cursor_color"/>
+    <Button
+        android:id="@+id/btn_show_web"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/edt_link"
+        android:background="@color/btn_background"
+        app:backgroundTint="@null"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:layout_marginHorizontal="10dp"
+        android:text="@string/btn_text"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

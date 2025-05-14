@@ -2,4 +2,7 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="tv_input">#7A9E38</color>
+    <color name="tv_input_focused">#E25888</color>
+    <color name="btn_background">#C0C2C3</color>
 </resources>

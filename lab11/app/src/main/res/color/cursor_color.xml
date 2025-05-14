@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Khi EditText có focus, sử dụng màu đỏ cho dấu nháy -->
+    <item android:state_focused="true" android:color="@color/tv_input_focused"/>
+    <!-- Trạng thái mặc định (khi không focus), dấu nháy không hiển thị, nhưng màu này cũng ảnh hưởng đến màu highlight khi chọn văn bản -->
+    <!-- Sử dụng màu highlight mặc định của theme cho trạng thái không focus -->
+    <item android:color="?attr/colorControlHighlight"/>
+</selector>
