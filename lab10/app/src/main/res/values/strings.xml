@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Intent_BroadcastReceiver</string>
+    <string name="title">BroadcastReceiver1</string>
+    <string name="button1_text">SMS Receiver</string>
 </resources>
