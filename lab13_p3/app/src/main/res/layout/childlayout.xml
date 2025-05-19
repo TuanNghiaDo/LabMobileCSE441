@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".SubActivity">
     <TextView
-        android:id="@+id/selection"
+        android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="20sp"
@@ -16,10 +16,10 @@
         android:layout_marginTop="50dp"
         android:gravity="center"/>
     <ImageView
-        android:id="@+id/image_view"
+        android:id="@+id/imageView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:src="@drawable/images1"
+        android:src="@drawable/image1"
         android:scaleType="centerCrop" />
 </LinearLayout>

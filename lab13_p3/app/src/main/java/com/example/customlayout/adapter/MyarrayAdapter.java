@@ -1,7 +1,6 @@
 package com.example.customlayout.adapter;
 
 import android.app.Activity;
-import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,14 +8,10 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-
 import com.example.customlayout.R;
 import com.example.customlayout.models.Image;
 
 import java.util.ArrayList;
-import java.util.List;
 
 //Mục đch của class này là để custom layout cho Gridview
 public class MyarrayAdapter extends ArrayAdapter<Image> {  //Đây là class quan trọng nhất dùng để custom layout cho Gridview
