@@ -7,8 +7,18 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.practice_inclass.gridview.adapter.ImageAdapter;
+
 public class MainActivity extends AppCompatActivity {
-    String [] arr = {"Ipad", "Iphone", "Macbook", "Apple Watch", "Airpods", "Iphone 14 Pro Max"};
+    // Tạo ra mảng các ID của các hình ảnh
+    private Integer[] mImageIds = {
+            R.drawable.images1,
+            R.drawable.images2,
+            R.drawable.images3,
+            R.drawable.images4,
+            R.drawable.images5,
+            R.drawable.images6
+    };
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -16,13 +26,7 @@ public class MainActivity extends AppCompatActivity {
         final TextView selection = (TextView) findViewById(R.id.selection);
         final GridView gridView = (GridView)findViewById(R.id.grid_view1);
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, arr);
-
-        gridView.setAdapter(adapter);
-
-        gridView.setOnItemClickListener((parent, view, position, id) -> {
-            String selectedItem = (String) parent.getItemAtPosition(position);
-            selection.setText(selectedItem);
-        });
+        ImageAdapter imageAdapter = new ImageAdapter(this, mImageIds);
+        gridView.setAdapter(imageAdapter);
     }
 }
