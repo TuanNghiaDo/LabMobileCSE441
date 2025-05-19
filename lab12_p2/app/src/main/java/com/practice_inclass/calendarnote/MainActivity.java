@@ -130,4 +130,18 @@ public class MainActivity extends AppCompatActivity {
         // commit() lưu đồng bộ (chờ lưu xong mới chạy tiếp)
         editor.apply();
     }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        saveTasks(); // Lưu dữ liệu khi activity tạm dừng
+    }
+
+    // --- (Tùy chọn) Lưu dữ liệu khi Activity bị hủy hẳn (ví dụ: khi người dùng đóng app từ Recent Apps hoặc hệ thống cần giải phóng bộ nhớ) ---
+    // onPause() thường đủ, nhưng onDestory() cũng là một nơi an toàn để lưu lần cuối
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        saveTasks(); // Lưu dữ liệu khi activity bị hủy
+    }
 }
