@@ -1,7 +1,7 @@
 package com.example.customlayout.models;
 
 public class Image {
-    private int img;
+    private int img; //lưu id của hình ảnh
     private String name;
      public int getImg(){
          return img;
