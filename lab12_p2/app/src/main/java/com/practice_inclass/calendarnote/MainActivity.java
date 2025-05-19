@@ -4,11 +4,13 @@ import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -88,7 +90,39 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+        // --- THÊM CHỨC NĂNG XÓA KHI CLICK VÀO MỤC TRONG LISTVIEW ---
+        lv1.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, final int position, long id) {
+                // position là chỉ mục (index) của mục được click trong danh sách arrayWork
+
+                // Hiển thị Dialog xác nhận xóa (nên có để tránh xóa nhầm)
+                new android.app.AlertDialog.Builder(MainActivity.this)
+                        .setTitle("Xác nhận xóa")
+                        .setMessage("Bạn có chắc chắn muốn xóa công việc này không?\n" + arrayWork.get(position)) // Hiển thị nội dung mục sẽ xóa
+                        .setPositiveButton("Có", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                // Bước 1: Xóa dữ liệu khỏi mảng arrayWork
+                                arrayWork.remove(position);
+
+                                // Bước 2: Cập nhật lại Adapter để ListView hiển thị dữ liệu mới
+                                arrAdater.notifyDataSetChanged();
+
+                                // --- THÊM CHỨC NĂNG LƯU TRỮ DỮ LIỆU: LƯU SAU KHI XÓA ---
+                                saveTasks(); // Lưu lại dữ liệu sau khi xóa
+
+                                // Thông báo đã xóa thành công (tùy chọn)
+                                Toast.makeText(MainActivity.this, "Đã xóa công việc", Toast.LENGTH_SHORT).show();
+                            }
+                        })
+                        .setNegativeButton("Không", null) // Nút Không chỉ đóng dialog
+                        .show();
+            }
+        });
     }
+
 
     private void loadTasks() {
         // Lấy đối tượng SharedPreferences để đọc dữ liệu
