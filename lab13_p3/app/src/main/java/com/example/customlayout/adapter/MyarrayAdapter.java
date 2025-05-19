@@ -20,7 +20,7 @@ public class MyarrayAdapter extends ArrayAdapter<Image> {  //Đây là class qua
     int layoutId;
 
     public MyarrayAdapter(Activity context, int layoutId, ArrayList<Image> myArray) {
-        super(context, layoutId);
+        super(context, layoutId, myArray);
         this.context = context;
         this.layoutId = layoutId;
         this.myArray = myArray;
