@@ -70,6 +70,7 @@
         app:backgroundTint="@color/button"
         android:text="Add Work"/>
     <ListView
+        android:id="@+id/lv1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
