@@ -1,5 +1,6 @@
 package com.practice_inclass.gridview;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.GridView;
@@ -28,5 +29,19 @@ public class MainActivity extends AppCompatActivity {
 
         ImageAdapter imageAdapter = new ImageAdapter(this, mImageIds);
         gridView.setAdapter(imageAdapter);
+
+        // Thiết lập sự kiện click cho GridView
+        gridView.setOnItemClickListener((parent, view, position, id) -> {
+            int imageId = mImageIds[position];
+
+            //Tạo intent để mở Detail Activity
+            Intent intent = new Intent(MainActivity.this, DetailImageActivity.class);
+
+            //Truyền ID của hình ảnh đã chọn vào intent
+            intent.putExtra("imageId", imageId);
+
+            //Khởi động Detail Activity
+            startActivity(intent);
+        });
     }
 }
