@@ -1,6 +1,7 @@
 package com.practice_inclass.calendarnote;
 
 import android.content.DialogInterface;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -12,10 +13,16 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
+    private static final String PREFS_NAME = "MyPrefs";
+    private static final String TASKS_KEY = "tasksList";
+    // Ký tự đặc biệt để phân tách các mục trong danh sách khi lưu vào SharedPreferences
+    // Chọn ký tự ít khả năng xuất hiện trong nội dung công việc thực tế
+    private static final String ITEM_DELIMITER = "#";
     ListView lv1;
     ArrayList<String> arrayWork;
     ArrayAdapter<String> arrAdater;
@@ -37,14 +44,18 @@ public class MainActivity extends AppCompatActivity {
         arrayWork = new ArrayList<>();
         //Khai bao adapter, dua mang du lieu vao adpater
         arrAdater = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, arrayWork);
-        //Dua adapter co du lieu len listview
-        lv1.setAdapter(arrAdater);
+
+
         //Lay ngay gio he thong
         Date currentDate = Calendar.getInstance().getTime();
         //Format theo dinh dang dd/MM/yyyy
         java.text.SimpleDateFormat simpleDateFormat = new java.text.SimpleDateFormat("dd/MM/yyyy");
         txtDate.setText("Hon nay: " + simpleDateFormat.format(currentDate));
 
+        //Thêm chức năng lưu trữ dữ liệu khi thoát chương triình
+        loadTasks(); //Gọi hàm đọc dữ liệu khi khởi động app
+        //Dua adapter co du lieu len listview
+        lv1.setAdapter(arrAdater);
         //Su kien click nut them cong viec
         btnAddWork.setOnClickListener(new View.OnClickListener() { //onClickListener là một interface
             @Override
@@ -69,11 +80,54 @@ public class MainActivity extends AppCompatActivity {
                     arrayWork.add(str);
                     //Bước 2: cập nhật lại adapter
                     arrAdater.notifyDataSetChanged();
+                    //Lưu dữ liệu sau khi thêm
+                    saveTasks();
                     edtWork.setText("");
                     edtHour.setText("");
                     edtMinute.setText("");
                 }
             }
         });
+    }
+
+    private void loadTasks() {
+        // Lấy đối tượng SharedPreferences để đọc dữ liệu
+        SharedPreferences prefs = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
+
+        // Đọc chuỗi dữ liệu từ SharedPreferences. Tham số thứ 2 là giá trị mặc định nếu không tìm thấy key
+        String tasksString = prefs.getString(TASKS_KEY, null);
+
+        // Kiểm tra xem có dữ liệu đã lưu không
+        if (tasksString != null && !tasksString.isEmpty()) {
+            // Tách chuỗi đã lưu thành mảng các chuỗi dựa vào ký tự phân tách
+            String[] tasksArray = tasksString.split(ITEM_DELIMITER);
+
+            // Chuyển mảng các chuỗi thành ArrayList
+            arrayWork.addAll(Arrays.asList(tasksArray));
+
+            // Lưu ý: Nếu dùng ArrayList.add() từng cái thì cũng được, nhưng addAll nhanh hơn
+            // for (String task : tasksArray) {
+            //     arrayWork.add(task);
+            // }
+        }
+    }
+
+    // --- HÀM LƯU DỮ LIỆU VÀO SharedPreferences ---
+    private void saveTasks() {
+        // Lấy đối tượng SharedPreferences để chỉnh sửa
+        SharedPreferences prefs = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
+        SharedPreferences.Editor editor = prefs.edit();
+
+        // Chuyển danh sách ArrayList thành một chuỗi duy nhất bằng cách nối các phần tử với ký tự phân tách
+        // Sử dụng String.join() từ Java 8 trở lên, hoặc vòng lặp/StringBuilder nếu cần tương thích cũ hơn
+        String tasksString = String.join(ITEM_DELIMITER, arrayWork);
+
+        // Lưu chuỗi vào SharedPreferences với key TASKS_KEY
+        editor.putString(TASKS_KEY, tasksString);
+
+        // Áp dụng các thay đổi (lưu dữ liệu)
+        // apply() lưu không đồng bộ (nhanh hơn, khuyến khích dùng)
+        // commit() lưu đồng bộ (chờ lưu xong mới chạy tiếp)
+        editor.apply();
     }
 }
