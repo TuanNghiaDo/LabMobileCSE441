@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/edtMemberCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Mã hội viên"
+        android:inputType="text"
+        android:enabled="false" /> <!-- Không cho sửa mã -->
+
+    <EditText
+        android:id="@+id/edtUsername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Tên hội viên"
+        android:inputType="textCapWords" />
+
+    <EditText
+        android:id="@+id/edtHometown"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Quê quán"
+        android:inputType="textCapWords" />
+
+    <!-- Thêm các EditText khác cho các trường bạn muốn sửa -->
+
+</LinearLayout>
