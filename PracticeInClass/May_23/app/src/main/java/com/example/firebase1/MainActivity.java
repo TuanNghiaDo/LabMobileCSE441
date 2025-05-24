@@ -50,17 +50,28 @@ public class MainActivity extends AppCompatActivity {
 
         ref.addValueEventListener(new ValueEventListener() {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                Log.d("MyFirebaseApp", "onDataChange called!"); // <-- Thêm dòng này
-                Log.d("MyFirebaseApp", "Snapshot exists: " + snapshot.exists()); // <-- Thêm dòng này
-                Log.d("MyFirebaseApp", "Children count: " + snapshot.getChildrenCount()); // <-- Thêm dòng này
-                players.clear();
+                Log.d("MyFirebaseApp", "onDataChange called!");
+                Log.d("MyFirebaseApp", "Snapshot exists: " + snapshot.exists());
+                Log.d("MyFirebaseApp", "Children count: " + snapshot.getChildrenCount());
+                players.clear(); // Xóa danh sách cũ
+
                 for (DataSnapshot snap : snapshot.getChildren()) {
-                    Log.d("MyFirebaseApp", "Processing child with key: " + snap.getKey()); // <-- Thêm dòng này
+                    Log.d("MyFirebaseApp", "Processing child with key: " + snap.getKey());
                     Player p = snap.getValue(Player.class);
-                    players.add(p);
+
+                    // SỬA LỖI TẠI ĐÂY: Chỉ thêm vào danh sách nếu đối tượng Player được map thành công (khác null)
+                    if (p != null) {
+                        Log.d("MyFirebaseApp", "Player mapped successfully: " + p.username + " - " + p.member_code); // Log để xác nhận
+                        players.add(p); // <--- Di chuyển vào trong khối if
+                    } else {
+                        Log.e("MyFirebaseApp", "Failed to map snapshot for key: " + snap.getKey() + " to Player object."); // Log lỗi map
+                    }
                 }
+
+                Log.d("MyFirebaseApp", "Finished processing children. Final list size: " + players.size()); // Log kích thước cuối cùng
+
                 adapter.notifyDataSetChanged();
-                Log.d("MyFirebaseApp", "notifyDataSetChanged called."); // <-- Thêm dòng này
+                Log.d("MyFirebaseApp", "notifyDataSetChanged called.");
             }
 
             public void onCancelled(@NonNull DatabaseError error) {
