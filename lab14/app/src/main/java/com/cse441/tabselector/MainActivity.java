@@ -1,69 +1,98 @@
 package com.cse441.tabselector;
 
-import android.content.SharedPreferences;
+import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ListView;
+import android.widget.TabHost;
+import android.widget.TextView;
+import android.widget.Toast;
 
-import androidx.activity.EdgeToEdge;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends Activity {
 
-    // Ví dụ: dùng SharedPreferences để kiểm tra xem người dùng đã vào màn hình chính chưa
-    private static final String PREFS_NAME = "MyPrefsFile";
-    private static final String KEY_FIRST_LAUNCH_COMPLETED = "firstLaunchCompleted";
+    EditText edta, edtb;
+    Button btncong;
+    ListView lv1;
+    ArrayList<String> list;
+    ArrayAdapter<String> myarray;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        addControl();
+        addEvent();
+    }
 
-        // Logic để quyết định hiển thị layout nào
-        // Ví dụ: Kiểm tra xem đây có phải lần khởi chạy đầu tiên không
-        SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
-        boolean firstLaunchCompleted = settings.getBoolean(KEY_FIRST_LAUNCH_COMPLETED, false);
+    private void addEvent() {
+        // TODO Auto-generated method stub
+        btncong.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+                Xulycong();
+            }
+        });
+    }
 
-        if (!firstLaunchCompleted) {
-            // Đây là lần đầu hoặc người dùng chưa hoàn thành bước nào đó
-            // Hiển thị layout chào mừng (activity_welcome.xml)
-            setContentView(R.layout.tab1);
+    private void Xulycong() {
+        // TODO Auto-generated method stub
+        String strA = edta.getText().toString();
+        String strB = edtb.getText().toString();
 
-            Button buttonGoToMain = findViewById(R.id.buttonGoToMain);
-            buttonGoToMain.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    // Đánh dấu đã hoàn thành màn hình chào mừng
-                    SharedPreferences.Editor editor = settings.edit();
-                    editor.putBoolean(KEY_FIRST_LAUNCH_COMPLETED, true);
-                    editor.apply();
+        if (strA.isEmpty() || strB.isEmpty()) {
+            Toast.makeText(this, "Vui lòng nhập cả hai số", Toast.LENGTH_SHORT).show();
+            return;
+        }
 
-                    // Load lại MainActivity với layout chính
-                    // Hoặc bạn có thể chỉ cần load layout chính ngay tại đây
-                    // và thiết lập lại các view nếu cần.
-                    // Cách đơn giản nhất là gọi lại setContentView:
-                    setContentView(R.layout.activity_main);
-                    initializeMainLayout(); // Hàm để khởi tạo các view của activity_main
-                }
-            });
+        try {
 
-        } else {
-            // Người dùng đã qua màn hình chào mừng, hiển thị layout chính (activity_main.xml)
-            setContentView(R.layout.activity_main);
-            initializeMainLayout(); // Hàm để khởi tạo các view của activity_main
+            int a = Integer.parseInt(strA);
+            int b = Integer.parseInt(strB);
+            int ketquaTinh = a + b;
+            String c = a + " + " + b + " = " + ketquaTinh;
+            list.add(c);
+            myarray.notifyDataSetChanged();
+
+            edta.setText("");
+            edtb.setText("");
+        } catch (NumberFormatException e) {
+            Toast.makeText(this, "Đầu vào không hợp lệ. Vui lòng nhập số.", Toast.LENGTH_SHORT).show();
         }
     }
 
-    // Hàm này để khởi tạo các UI elements của layout activity_main.xml
-    private void initializeMainLayout() {
-        // Ví dụ:
-        // TextView textViewMain = findViewById(R.id.textViewMain);
-        // if (textViewMain != null) {
-        //     textViewMain.setText("Đây là màn hình chính!");
-        // }
-        // ... các khởi tạo khác cho activity_main
-        System.out.println("Đã vào initializeMainLayout");
+
+    private void addControl() {
+        // TODO Auto-generated method stub
+        TabHost tab = (TabHost) findViewById(R.id.tabhost);
+        tab.setup();
+        TabHost.TabSpec tab1 = tab.newTabSpec("t1");
+        tab1.setContent(R.id.tab1);
+
+        tab1.setIndicator("", getResources().getDrawable(R.drawable.phepcong));
+        tab.addTab(tab1);
+
+
+        TabHost.TabSpec tab2 = tab.newTabSpec("t2");
+        tab2.setContent(R.id.tab2);
+
+        tab2.setIndicator("", getResources().getDrawable(R.drawable.lichsu));
+        tab.addTab(tab2);
+
+        edta = (EditText) findViewById(R.id.edta);
+        edtb = (EditText) findViewById(R.id.edtb);
+        btncong = (Button) findViewById(R.id.btncong);
+        lv1 = (ListView) findViewById(R.id.lv1);
+        list = new ArrayList<String>();
+
+        myarray = new ArrayAdapter<String>(MainActivity.this,
+                android.R.layout.simple_list_item_1,
+                list);
+        lv1.setAdapter(myarray);
     }
 }
