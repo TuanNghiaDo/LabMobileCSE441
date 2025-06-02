@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:padding="16dp"
     tools:context=".MainActivity">
@@ -15,14 +16,17 @@
         android:textSize="18sp"
         android:textColor="@android:color/black"
         android:layout_marginBottom="4dp"/>
+
     <EditText
         android:id="@+id/editTextA"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="numberDecimal|numberSigned"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/edittext_underline_focus"
         android:hint="Giá trị a"
-        android:textSize="18sp"
-        android:layout_marginBottom="16dp"/>
+        android:inputType="numberDecimal|numberSigned"
+        android:textSize="18sp" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -35,15 +39,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="numberDecimal|numberSigned"
+        android:backgroundTint="@color/edittext_underline_focus"
         android:hint="Giá trị b"
         android:textSize="18sp"
         android:layout_marginBottom="24dp"/>
     <Button
-        android:id="@+id/buttonAdd"
+        android:id="@+id/buttonGoToMain"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:text="+"
+        android:textColor="@color/black"
+        android:background="@color/button_color"
+        app:backgroundTint="@null"
         android:textSize="24sp"
         android:minWidth="64dp"
         android:minHeight="64dp"
