@@ -3,6 +3,7 @@ plugins {
 }
 
 android {
+    useLibrary("org.apache.http.legacy")
     namespace = "com.cse441.internetworking"
     compileSdk = 35
 
