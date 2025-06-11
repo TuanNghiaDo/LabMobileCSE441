@@ -1,6 +1,172 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- Thanh Toolbar với chữ "Bai18_ParseJson" thường được quản lý bởi theme của Activity -->
+    <!-- Dưới đây là phần layout cho bảng dữ liệu -->
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:stretchColumns="1,2"
+        android:background="#CCCCCC">
+
+        <!-- Hàng đầu tiên -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="1dp">
+
+            <!-- Cột 1: Icon -->
+            <ImageView
+                android:id="@+id/imgHinh"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@android:drawable/sym_def_app_icon"
+                android:padding="8dp"
+                android:background="#FFFFFF"
+                android:layout_marginEnd="1dp"
+                android:gravity="center"
+                android:contentDescription="Currency Icon" />
+
+            <!-- Cột 2: MuaTM -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:background="#FFFFFF"
+                android:padding="8dp"
+                android:layout_marginEnd="1dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/txtmua"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="MuaTM: "
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/txtMuaTM"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="16220"
+                    android:textColor="#FF0000"
+                    android:textStyle="bold"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+
+            <!-- Cột 3: BanTM -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:background="#FFFFFF"
+                android:padding="8dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="BanTM: "
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/txtBanTM"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="16370"
+                    android:textColor="#FF0000"
+                    android:textStyle="bold"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+
+        </TableRow>
+
+        <!-- Hàng thứ hai -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Cột 1: Text "USD" -->
+            <TextView
+                android:id="@+id/txtType"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="USD"
+                android:textStyle="bold"
+                android:padding="8dp"
+                android:background="#FFFFFF"
+                android:layout_marginEnd="1dp"
+                android:gravity="center"
+                android:textColor="#FF0000"/>
+
+            <!-- Cột 2: MuaCK -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:background="#FFFFFF"
+                android:padding="8dp"
+                android:layout_marginEnd="1dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="MuaCK: "
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/txtMuaCK"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="22920"
+                    android:textColor="#FF0000"
+                    android:textStyle="bold"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+
+            <!-- Cột 3: BanCK -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:background="#FFFFFF"
+                android:padding="8dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="BanCK: "
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/txtBanCK"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="23170"
+                    android:textColor="#FF0000"
+                    android:textStyle="bold"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+
+        </TableRow>
+
+    </TableLayout>
+
+</LinearLayout>
